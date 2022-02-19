@@ -10,7 +10,7 @@ createServer({
 
   },
 
-  seeds(server) {
+  /* seeds(server) {
     server.db.loadData({
       transactions: [
         {
@@ -31,7 +31,7 @@ createServer({
         }
       ]
     })
-  },
+  }, */
 
   routes() {
     this.namespace = 'api';

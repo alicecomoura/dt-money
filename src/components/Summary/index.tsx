@@ -1,15 +1,15 @@
 
-import { accessSync } from 'fs';
 import React, { useContext } from 'react'
+import { useTransactions } from '../../hooks/useTransactions';
+
 import incomeImg from '../../assets/income.svg'
 import outcomeImg from '../../assets/outcome.svg'
 import totalImg from '../../assets/total.svg'
-import { TransactionsContext } from '../../TransactionsContext';
 
 import { Container } from "./styles";
 
 export function Summary() {
-    const { transactions } = useContext(TransactionsContext);
+    const { transactions } = useTransactions();
 
     const sumary = transactions.reduce((acc, transactions) => {
         if(transactions.type === 'deposit') {
